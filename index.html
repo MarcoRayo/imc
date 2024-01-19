@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="black bg-dark text-white">IMC</h1>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row">
+                <!--- Formulario -->
+                <div class="col-md-6">                    
+                    <h3 class="text-center">Formulario</h3>
+                    <div class="p-2 bg-light d-flex justify-content-center align-items-center">
+                        <label for="kilo" class="px-2">Peso (Kg)</label>
+                        <input id="kilo" type="number"/>
+                    </div>
+                    <div class="p-2 bg-light d-flex justify-content-center align-items-center">
+                        <label for="metro" class="px-2">Altura (m)</label>
+                        <input type="number" id="metro">
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-secondary" id="btnCalcular"
+                            onclick="calcular()">Calcular</button>
+                        <button type="button" class="btn btn-danger" id="btnBorrar" disabled onclick="borrar()">Borrar</button>
+                    </div>
+                </div>
+                <!--- Tabla -->
+                <div class="col-md-6">
+                    <h3 class="text-center">Tabla</h3>
+                    <table class="table table-sm table-bordered table-responsive" with="500px">
+                        <thead>
+                            <tr with="100px">
+                                <th scope="col" class="text-center bg-black text-white">Color</td>
+                                <th scope="col" class="text-center bg-black text-white">Resultado</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td id="bajo"></td>
+                            <td class="text-center">Bajo peso</td>
+                        </tr>
+                        <tr>
+                            <td id="normal"></td>
+                            <td class="text-center">Normal</td>
+                        </tr>
+                        <tr>
+                            <td id="sobre"></td>
+                            <td class="text-center">Sobre Peso</td>
+                        </tr>
+                        <tr>
+                            <td id="obesidad"></td>
+                            <td class="text-center">Obesidad</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
